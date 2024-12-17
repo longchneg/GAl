@@ -1,0 +1,75 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "恐鬼症 By 龙城",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Rayfield Interface Suite",
+   LoadingSubtitle = "by Sirius",
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+})
+
+local info = Window:CreateTab("证据", 4483362458)
+local Thermometer = info:CreateParagraph({Title = "冻结温度(一直获取=没有冻结)", Content = "获取中..."})
+local Ouijabox = info:CreateParagraph({Title = "精灵盒(盒在鬼屋)", Content = "获取中..."})
+
+local ESP = Window:CreateTab("物品", 4483362458)
+
+--精灵盒功能
+local Spirit = workspace:GetDescendants()
+local Name = "Spirit Box"
+local Lock2 = false
+
+local function onchildAdded(child)
+	if child:IsA("Sound") then
+		local childName = string.lower(child.Name)
+        Ouijabox:Set({Title = "精灵盒(盒在鬼屋)", Content = childName})
+        if Lock2 == false then
+            Rayfield:Notify({
+                Title = "精灵盒",
+                Content = "精灵盒获取成功，请在界面内查看",
+                Duration = 5,
+                Image = 4483362458,
+            })
+        end
+        Lock2 = true
+	end
+end
+
+for _, SpiritName in ipairs(Spirit) do
+    if SpiritName.Name == Name and SpiritName:IsA("Tool") then
+        local Handle = SpiritName:GetChildren()
+		for _, HandleName in ipairs(Handle) do
+			if HandleName.Name == "Handle" then
+				HandleName.ChildAdded:Connect(onchildAdded)
+			end
+		end
+    end
+end
+--精灵盒功能
+Rayfield:LoadConfiguration()
+--冻结温度功能
+local Lock = false
+repeat
+	local workspace1 = workspace:GetDescendants()
+    for _, workspaces in ipairs(workspace1) do
+	    if workspaces.Name == "_____Temperature" then
+		    if workspaces.Value < 0 then
+			    local WorkspaceValue = tonumber(workspaces.Value)
+			    Thermometer:Set({Title = "冻结温度(等待低温)", Content = WorkspaceValue})
+				Rayfield:Notify({
+                    Title = "冻结温度",
+                    Content = "冻结温度获取成功，请在界面内查看",
+                    Duration = 5,
+                    Image = 4483362458,
+                })
+				Lock = true
+		    end
+	    end
+    end
+	wait(0.5)
+until Lock
+--冻结温度功能
