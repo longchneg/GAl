@@ -1,0 +1,143 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Name = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local GTButt = Instance.new("TextButton")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local GAlButt = Instance.new("TextButton")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local TextLabel_2 = Instance.new("TextLabel")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local GT = Instance.new("ImageLabel")
+local GAl = Instance.new("ImageLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.338624328, 0, 0.3073048, 0)
+Frame.Size = UDim2.new(0.322751313, 0, 0.384130985, 0)
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = Frame
+
+Name.Name = "Name"
+Name.Parent = Frame
+Name.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name.BorderSizePixel = 0
+Name.Size = UDim2.new(1, 0, 0.091803275, 0)
+
+TextLabel.Parent = Name
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.000283363217, 0, 0.0793914795, 0)
+TextLabel.Size = UDim2.new(0, 84, 0, 25)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "GT & GAl"
+TextLabel.TextColor3 = Color3.fromRGB(163, 163, 163)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0, 0, 0.149126694, 0)
+ScrollingFrame.Size = UDim2.new(1, 0, 0.773770511, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1, 0)
+
+GTButt.Name = "GTButt"
+GTButt.Parent = ScrollingFrame
+GTButt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GTButt.BackgroundTransparency = 1.000
+GTButt.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GTButt.BorderSizePixel = 0
+GTButt.Position = UDim2.new(0.352414727, 0, 0.0942749009, 0)
+GTButt.Size = UDim2.new(0, 152, 0, 43)
+GTButt.Font = Enum.Font.SourceSans
+GTButt.Text = "GT MOD 脚本"
+GTButt.TextColor3 = Color3.fromRGB(0, 251, 255)
+GTButt.TextScaled = true
+GTButt.TextSize = 14.000
+GTButt.TextWrapped = true
+
+UITextSizeConstraint.Parent = GTButt
+UITextSizeConstraint.MaxTextSize = 14
+
+GAlButt.Name = "GAlButt"
+GAlButt.Parent = ScrollingFrame
+GAlButt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GAlButt.BackgroundTransparency = 1.000
+GAlButt.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GAlButt.BorderSizePixel = 0
+GAlButt.Position = UDim2.new(0.35409835, 0, 0.572483361, 0)
+GAlButt.Size = UDim2.new(0, 152, 0, 43)
+GAlButt.Font = Enum.Font.SourceSans
+GAlButt.Text = "GAl 恐鬼脚本"
+GAlButt.TextColor3 = Color3.fromRGB(0, 251, 255)
+GAlButt.TextScaled = true
+GAlButt.TextSize = 14.000
+GAlButt.TextWrapped = true
+
+UITextSizeConstraint_2.Parent = GAlButt
+UITextSizeConstraint_2.MaxTextSize = 14
+
+TextLabel_2.Parent = ScrollingFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(-8.20785289e-08, 0, 0.30203855, 0)
+TextLabel_2.Size = UDim2.new(0, 371, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "-------------------------------------------------------------"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+UITextSizeConstraint_3.Parent = TextLabel_2
+UITextSizeConstraint_3.MaxTextSize = 24
+
+GT.Name = "GT"
+GT.Parent = ScrollingFrame
+GT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GT.BorderSizePixel = 0
+GT.Position = UDim2.new(0, 0, -0.0014363951, 0)
+GT.Size = UDim2.new(0, 100, 0, 100)
+GT.Image = "http://www.roblox.com/asset/?id=92982480464056"
+
+GAl.Name = "GAl"
+GAl.Parent = ScrollingFrame
+GAl.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GAl.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GAl.BorderSizePixel = 0
+GAl.Position = UDim2.new(-0.00327868853, 0, 0.484529912, 0)
+GAl.Size = UDim2.new(0, 100, 0, 100)
+GAl.Image = "http://www.roblox.com/asset/?id=73965937917061"
+
+GTButt.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\110\97\105\110\115\104\117\47\71\84\45\72\85\66\47\109\97\105\110\47\71\84\46\108\117\97"))()
+	ScreenGui:Destroy()
+end)
+GAlButt.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/longchneg/GAl/refs/heads/main/horror"))()
+	ScreenGui:Destroy()
+end)
