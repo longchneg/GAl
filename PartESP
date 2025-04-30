@@ -1,4 +1,4 @@
-local function HealthESP(Players)
+function _G.HealthESP(Players)
     local part = Players
     local TweenService = game:GetService("TweenService")
     local BillboardGui = Instance.new("BillboardGui")
