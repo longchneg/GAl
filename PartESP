@@ -1,5 +1,5 @@
 function _G.HealthESP(Players)
-    if Players:FindFirstChild("HumanoidRootPart"):FindFirstChild("BillboardGui") then
+    if not Players:FindFirstChild("HumanoidRootPart"):FindFirstChild("BillboardGui") then
         local part = Players
         local TweenService = game:GetService("TweenService")
         local BillboardGui = Instance.new("BillboardGui")
