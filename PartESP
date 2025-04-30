@@ -1,95 +1,96 @@
 function _G.HealthESP(Players)
-    local part = Players
-    local TweenService = game:GetService("TweenService")
-    local BillboardGui = Instance.new("BillboardGui")
-    local Frame = Instance.new("Frame")
-    local Frame_1 = Instance.new("Frame")
-    local Health = Instance.new("TextLabel")
-    local Numeric = Instance.new("TextLabel")
-    local Name = Instance.new("TextLabel")
-    local UICorner = Instance.new("UICorner")
-    local UIStroke = Instance.new("UIStroke")
-    local UICorner_1 = Instance.new("UICorner")
-    BillboardGui.Active = true
-    BillboardGui.LightInfluence = 1
-    BillboardGui.AlwaysOnTop = true
-    BillboardGui.Size = UDim2.new(0.00, 250.00, 0.00, 80.00)
-    BillboardGui.ClipsDescendants = true
-    BillboardGui.StudsOffsetWorldSpace = Vector3.new(0.00, 5.00, 0.00)
-    BillboardGui.MaxDistance = inf
-    BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    Frame.Size = UDim2.new(0.00, 230.00, 0.00, 30.00)
-    Frame.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
-    Frame.Position = UDim2.new(0.03, 0.00, 0.30, 0.00)
-    Frame.BorderSizePixel = 0
-    Frame.BackgroundTransparency = 0.5
-    Frame.BackgroundColor3 = Color3.new(0.00, 0.00, 0.00)
-    Frame.Parent = BillboardGui
-    Frame_1.Size = UDim2.new(0.00, 230.00, 0.00, 30.00)
-    Frame_1.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
-    Frame_1.BorderSizePixel = 0
-    Frame_1.BackgroundTransparency = 0.20000000298023224
-    Frame_1.BackgroundColor3 = Color3.new(0.00, 1.00, 0.00)
-    Frame_1.Parent = Frame
-    Numeric.Name = "Numeric"
-    Numeric.BorderSizePixel = 0
-    Numeric.BackgroundColor3 = Color3.new(1.00, 1.00, 1.00)
-    Numeric.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-    Numeric.TextXAlignment = Enum.TextXAlignment.Right
-    Numeric.TextSize = 20
-    Numeric.Size = UDim2.new(0.00, 60.00, 0.00, 20.00)
-    Numeric.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
-    Numeric.TextColor3 = Color3.new(1.00, 0.00, 0.00)
-    Numeric.BackgroundTransparency = 1
-    Numeric.Position = UDim2.new(0.74, 0.00, 0.99, 0.00)
-    Numeric.Parent = Frame_1
-    Name.Name = "Name"
-    Name.BorderSizePixel = 0
-    Name.BackgroundColor3 = Color3.new(1.00, 1.00, 1.00)
-    Name.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-    Name.TextSize = 20
-    Name.Size = UDim2.new(0.00, 229.00, 0.00, 20.00)
-    Name.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
-    Name.TextColor3 = Color3.new(0.80, 0.96, 1.00)
-    Name.BackgroundTransparency = 1
-    Name.Position = UDim2.new(0.00, 0.00, -0.68, 0.00)
-    Name.Parent = Frame_1
-    UICorner.Parent = Frame_1
-    UIStroke.Parent = Frame
-    UICorner_1.Parent = Frame
-
-    BillboardGui.Parent = part:FindFirstChild("HumanoidRootPart")
-    Name.Text = "未知"
-    Numeric.Text = "未知"
+    if Players:FindFirstChild("BillboardGui") then
+        local part = Players
+        local TweenService = game:GetService("TweenService")
+        local BillboardGui = Instance.new("BillboardGui")
+        local Frame = Instance.new("Frame")
+        local Frame_1 = Instance.new("Frame")
+        local Numeric = Instance.new("TextLabel")
+        local Name = Instance.new("TextLabel")
+        local UICorner = Instance.new("UICorner")
+        local UIStroke = Instance.new("UIStroke")
+        local UICorner_1 = Instance.new("UICorner")
+        BillboardGui.Active = true
+        BillboardGui.LightInfluence = 1
+        BillboardGui.AlwaysOnTop = true
+        BillboardGui.Size = UDim2.new(0.00, 250.00, 0.00, 80.00)
+        BillboardGui.ClipsDescendants = true
+        BillboardGui.StudsOffsetWorldSpace = Vector3.new(0.00, 5.00, 0.00)
+        BillboardGui.MaxDistance = inf
+        BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+        Frame.Size = UDim2.new(0.00, 230.00, 0.00, 30.00)
+        Frame.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+        Frame.Position = UDim2.new(0.03, 0.00, 0.30, 0.00)
+        Frame.BorderSizePixel = 0
+        Frame.BackgroundTransparency = 0.5
+        Frame.BackgroundColor3 = Color3.new(0.00, 0.00, 0.00)
+        Frame.Parent = BillboardGui
+        Frame_1.Size = UDim2.new(0.00, 230.00, 0.00, 30.00)
+        Frame_1.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+        Frame_1.BorderSizePixel = 0
+        Frame_1.BackgroundTransparency = 0.20000000298023224
+        Frame_1.BackgroundColor3 = Color3.new(0.00, 1.00, 0.00)
+        Frame_1.Parent = Frame
+        Numeric.Name = "Numeric"
+        Numeric.BorderSizePixel = 0
+        Numeric.BackgroundColor3 = Color3.new(1.00, 1.00, 1.00)
+        Numeric.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+        Numeric.TextXAlignment = Enum.TextXAlignment.Right
+        Numeric.TextSize = 20
+        Numeric.Size = UDim2.new(0.00, 60.00, 0.00, 20.00)
+        Numeric.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+        Numeric.TextColor3 = Color3.new(1.00, 0.00, 0.00)
+        Numeric.BackgroundTransparency = 1
+        Numeric.Position = UDim2.new(0.74, 0.00, 0.99, 0.00)
+        Numeric.Parent = Frame_1
+        Name.Name = "Name"
+        Name.BorderSizePixel = 0
+        Name.BackgroundColor3 = Color3.new(1.00, 1.00, 1.00)
+        Name.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+        Name.TextSize = 20
+        Name.Size = UDim2.new(0.00, 229.00, 0.00, 20.00)
+        Name.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+        Name.TextColor3 = Color3.new(0.80, 0.96, 1.00)
+        Name.BackgroundTransparency = 1
+        Name.Position = UDim2.new(0.00, 0.00, -0.68, 0.00)
+        Name.Parent = Frame_1
+        UICorner.Parent = Frame_1
+        UIStroke.Parent = Frame
+        UICorner_1.Parent = Frame
     
-    local humanoid = part:WaitForChild("Humanoid")
-    local tweenInfo = TweenInfo.new(
-        0.5,
-        Enum.EasingStyle.Quad,
-        Enum.EasingDirection.Out
-    )
-    local function updateHealthBar(currentHealth, maxHealth)
-        if maxHealth <= 0 then return end
-        local targetScaleX = math.clamp(currentHealth / maxHealth, 0, 1)
-        local targetSize = UDim2.new(targetScaleX, 0, 1, 0)
-        local tween = TweenService:Create(Frame_1, tweenInfo, { Size = targetSize })
-        tween:Play()
-        local numericLabel = Frame_1:FindFirstChild("Numeric")
-        if numericLabel and numericLabel:IsA("TextLabel") then
-            numericLabel.Text = string.format("%d / %d", math.floor(currentHealth + 0.5), maxHealth)
+        BillboardGui.Parent = part:FindFirstChild("HumanoidRootPart")
+        Name.Text = "未知"
+        Numeric.Text = "未知"
+        
+        local humanoid = part:WaitForChild("Humanoid")
+        local tweenInfo = TweenInfo.new(
+            0.5,
+            Enum.EasingStyle.Quad,
+            Enum.EasingDirection.Out
+        )
+        local function updateHealthBar(currentHealth, maxHealth)
+            if maxHealth <= 0 then return end
+            local targetScaleX = math.clamp(currentHealth / maxHealth, 0, 1)
+            local targetSize = UDim2.new(targetScaleX, 0, 1, 0)
+            local tween = TweenService:Create(Frame_1, tweenInfo, { Size = targetSize })
+            tween:Play()
+            local numericLabel = Frame_1:FindFirstChild("Numeric")
+            if numericLabel and numericLabel:IsA("TextLabel") then
+                numericLabel.Text = string.format("%d / %d", math.floor(currentHealth + 0.5), maxHealth)
+            end
         end
-    end
-    humanoid.HealthChanged:Connect(function(currentHealth)
-        updateHealthBar(currentHealth, humanoid.MaxHealth)
-    end)
-    updateHealthBar(humanoid.Health, humanoid.MaxHealth)
-    local nameLabel = Frame_1:FindFirstChild("Name")
-    if nameLabel and nameLabel:IsA("TextLabel") then
-        nameLabel.Text = part.Name
-    end
-    part:GetPropertyChangedSignal("Name"):Connect(function()
+        humanoid.HealthChanged:Connect(function(currentHealth)
+            updateHealthBar(currentHealth, humanoid.MaxHealth)
+        end)
+        updateHealthBar(humanoid.Health, humanoid.MaxHealth)
+        local nameLabel = Frame_1:FindFirstChild("Name")
         if nameLabel and nameLabel:IsA("TextLabel") then
             nameLabel.Text = part.Name
         end
-    end)
+        part:GetPropertyChangedSignal("Name"):Connect(function()
+            if nameLabel and nameLabel:IsA("TextLabel") then
+                nameLabel.Text = part.Name
+            end
+        end)
+    end
 end
