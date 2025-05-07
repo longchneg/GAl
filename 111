@@ -1,5 +1,0 @@
-for _, GunTool in ipairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
-    if GunTool:IsA("Tool") then
-        game:GetService("ReplicatedStorage"):WaitForChild("ShopSystem"):FireServer("Ammo",game:GetService("Players").LocalPlayer.Character:FindFirstChild(GunTool.Name))
-    end
-end
